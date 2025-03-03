@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gilroy';
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            width: 40%;
+            height: 60%;
+            display: grid;
+            background-color: red;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .child{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="chlid"></div>
+        <div class="chlid"></div>
+        <div class="chlid"></div>
+    </div>
+</body>
+</html>
