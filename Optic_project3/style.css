@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://raw.githubusercontent.com/yourusername/yourrepository/main/fonts/gilroy-regular.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/yourusername/yourrepository/main/fonts/gilroy-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://raw.githubusercontent.com/yourusername/yourrepository/main/fonts/gilroy-bold.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/yourusername/yourrepository/main/fonts/gilroy-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
