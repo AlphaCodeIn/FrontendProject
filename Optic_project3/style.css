@@ -169,7 +169,7 @@ body, html{
         width: fit-content;
     }
     .elem h1{
-        font-size: 12vw;
+        font-size: 12vmin;
         white-space: nowrap;
         font-weight: 350;
         margin-left: 10px;
