@@ -15,7 +15,21 @@ body{
     height: 100%;
     width: 100%;    
     padding-top: 0.1px;
-
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 5px;
+  height: auto;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+  cursor: pointer;
 }
 #nav{
     display: flex;
