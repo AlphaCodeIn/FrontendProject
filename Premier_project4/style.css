@@ -31,19 +31,18 @@ body{
     height: 100%;
     width: 21%;
     display: flex;
-    font-size: 18px;
     font-weight: 600;
     align-items: center;
     justify-content: center;
     font-family: 'Monument';
-    font-size: 35px;
+    font-size: 5vmin;
     letter-spacing: -1px;
 }
 #nav h2{
     height: 100%;
     width: 19%;
     display: flex;
-    font-size: 2vmin;
+    font-size: 4vmin;
     font-weight: 600;
     align-items: center;
     justify-content: center;
