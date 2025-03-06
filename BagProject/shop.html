@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Bag Store</title>
+    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="shop-main">
+      <div id="navbar-container"></div>
+      <script src="src/navbar.js"></script>
+
+      <!-- Yaha par search bar add kiya hai jo bags ko filter karega -->
+      <div id="product-slide">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search for bags..."
+          onkeyup="filterProducts()"
+        />
+      </div>
+
+      <div class="shop-container" id="shop-container"></div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>
+              We offer a wide variety of stylish <br />
+              and durable bags. Shop with us <br />
+              for quality and affordability!
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@bagstore.com</p>
+            <p>Phone: +91 9999999999</p>
+            <p>Location: Sonipat, India</p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 Bag Store. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script type="module">
+      import bags from "./src/bags.js";
+
+      function displayProducts(filteredBags = bags) {
+        let shopContainer = document.getElementById("shop-container");
+        shopContainer.innerHTML = "";
+
+        filteredBags.forEach((bag) => {
+          let div = document.createElement("div");
+          div.classList.add("bag");
+
+          div.innerHTML = `
+            <div class="bag-img-container" onclick="goToDetails('${bag.name}', '${bag.description}', ${bag.price}, '${bag.imgSrc}')">
+              <img src="${bag.imgSrc}" alt="${bag.name}">
+            </div>
+            <div class="bag-details">
+              <h3>${bag.name}</h3>
+              <p>₹${bag.price}</p>
+            </div>
+            <button onclick="addToCart('${bag.name}', '${bag.description}', ${bag.price}, '${bag.imgSrc}')">Add to Cart</button> 
+          `;
+
+          shopContainer.appendChild(div);
+        });
+      }
+
+      // Yaha par search function hai jo bags ko naam ke basis par filter karega
+      window.filterProducts = function () {
+        let searchText = document
+          .getElementById("search-bar")
+          .value.toLowerCase();
+        let filteredBags = bags.filter((bag) =>
+          bag.name.toLowerCase().includes(searchText)
+        );
+        displayProducts(filteredBags);
+      };
+
+      // Jab koi image click karega toh details page open hoga
+      window.goToDetails = function (name, description, price, imgSrc) {
+        let bagDetails = { name, description, price, imgSrc };
+        localStorage.setItem("bagDetails", JSON.stringify(bagDetails));
+        window.location.href = "details.html";
+      };
+
+      // Yaha par add to cart function hai jo bag ko cart me store karega
+      window.addToCart = function (name, description, price, imgSrc) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.some((item) => item.name === name)) {
+          alert("Yeh bag already cart me hai!");
+          return;
+        }
+
+        cart.push({ name, description, price, imgSrc });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert("Bag cart me add ho gaya!");
+      };
+
+      // Page load hote hi saare bags dikhenge
+      document.addEventListener("DOMContentLoaded", () => displayProducts());
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

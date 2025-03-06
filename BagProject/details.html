@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bag Details</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="navbar-container"></div>
+      <script src="src/navbar.js"></script>
+
+      <div class="details-container">
+        <div class="image-container">
+          <img id="bag-img" src="" alt="Bag" />
+        </div>
+        <div class="info-container">
+          <h2 id="bag-name"></h2>
+          <p id="bag-description"></p>
+          <p id="bag-long-description"></p>
+          <!-- Long description add kiya -->
+          <p>
+            <strong>Price: <span id="bag-price"> </span></strong>
+          </p>
+          <p><strong>Delivery Time:</strong> 2-7 days</p>
+          <h2>Delivery and Payment</h2>
+          <div class="delivery-payment">
+            <p>✔ Fast delivery within 2-7 days.</p>
+            <p>✔ Cash on Delivery (COD) available.</p>
+            <p>✔ Secure online payment options.</p>
+          </div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div id="related">
+        <h2>Related Bags</h2>
+        <div class="container" id="related-bags"></div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>
+              We offer a wide variety of stylish <br />
+              and durable bags. Shop with us <br />
+              for quality and affordability!
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@bagstore.com</p>
+            <p>Phone: +91 9999999999</p>
+            <p>Location: Sonipat, India</p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 Bag Store. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bag Store</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="navbar-container"></div>
+      <script type="module" src="src/navbar.js"></script>
+      <div id="hero">
+        <div id="lft-text">
+          <h1>
+            All Bags,<br />
+            Available Here
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            nesciunt quos quia similique aliquam architecto optio illum iste a
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+            inventore!
+          </p>
+          <a href="shop.html">Shop Now</a>
+        </div>
+        <div id="rght-img">
+          <div id="ri-image"></div>
+        </div>
+      </div>
+      <h1 id="most-popular">Most Popular Bags</h1>
+      <div class="container" id="popular-bags"></div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>
+              We offer a wide variety of stylish <br />
+              and durable bags. Shop with us <br />
+              for quality and affordability!
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@bagstore.com</p>
+            <p>Phone: +91 9999999999</p>
+            <p>Location: Sonipat, India</p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 Bag Store. All rights reserved.</p>
+      </footer>
+    </div>
+    <script type="module">
+      import bags from "./src/bags.js";
+
+      function loadPopularBags() {
+        let container = document.getElementById("popular-bags");
+        container.innerHTML = "";
+
+        let popularBags = bags.slice(0, 5);
+
+        popularBags.forEach((bag) => {
+          let bagDiv = document.createElement("div");
+          bagDiv.classList.add("bag");
+
+          bagDiv.innerHTML = `
+        <div class="bag-image">
+            <img src="${bag.imgSrc}" alt="${bag.name}">
+        </div>
+        <p>${bag.name} - ₹${bag.price}</p>
+    `;
+
+          bagDiv.onclick = function () {
+            goToDetails(bag.name, bag.description, bag.price, bag.imgSrc);
+          };
+
+          container.appendChild(bagDiv);
+        });
+      }
+
+      function goToDetails(name, description, price, imgSrc) {
+        let bagDetails = { name, description, price, imgSrc };
+        localStorage.setItem("bagDetails", JSON.stringify(bagDetails));
+        window.location.href = "details.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", loadPopularBags); // ✅ Ab sirf popular bags load honge
+    </script>
+  </body>
+</html>

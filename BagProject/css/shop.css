@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#shop-main {
+  width: 100%;
+}
+#shop-main #product-slide {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  background: #e0dce4;
+  background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fcute-shopping-bag-banner-colorful-shopping-bags-with-different-design-board-gift-package-with-space-text-vector-illustration_254939-690.jpg%3Fw%3D2000&f=1&nofb=1&ipt=78a854890f124590d480543930a2b9b92f2c23c040ea0b15dba381eb73dd216b&ipo=images);
+  background-position: center;
+  background-size: cover;
+}
+#search-bar {
+  width: 30%;
+  padding: 12px 15px;
+  font-size: 18px;
+  border: 2px solid #888;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  height: 40px;
+}
+#search-bar:focus {
+  border-color: #000;
+}
+
+/*  SHOP PAGE STYLING */
+.shop-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+/* Individual Bag Item */
+.bag {
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 250px;
+}
+
+/*Image Container */
+.bag-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.bag-img-container img {
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.bag-details h3 {
+  margin-top: 10px;
+}
+/*Hover Effect */
+.bag-img-container img:hover {
+  transform: scale(1.1);
+}
+
+.bag button {
+  background-color: #323232;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 8px;
+  transition: background 0.3s;
+}
+
+.bag button:hover {
+  background-color: #1b1b1b;
+}

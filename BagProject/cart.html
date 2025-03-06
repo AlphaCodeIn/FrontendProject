@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="cart-main">
+        <div id="navbar-container"></div>
+        <script src="src/navbar.js"></script>
+        <div id="organize">
+          <div id="cart-container"></div>
+          <div id="total-price-container">
+            <h2>Total Price: ₹<span id="total-price">0</span></h2>
+            <button id="buy-button" onclick="buyNow()" style="display: none">
+              Buy Now
+            </button>
+          </div>
+        </div>
+
+        <div id="celebration-container" class="celebration-container">
+          <div id="celebration">🎉 Your Order is Successfully Placed! 🎉</div>
+          <button id="buy-next" class="center-button" onclick="resetCart()">
+            Buy Next Product
+          </button>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>
+              We offer a wide variety of stylish <br />
+              and durable bags. Shop with us <br />
+              for quality and affordability!
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@bagstore.com</p>
+            <p>Phone: +91 9999999999</p>
+            <p>Location: Sonipat, India</p>
+          </div>
+        </div>
+        <p class="footer-bottom">© 2025 Bag Store. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="./src/cart.js"></script>
+  </body>
+</html>
