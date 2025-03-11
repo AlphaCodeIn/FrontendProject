@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  background-color: #f8f8f2;
+  color: #333;
+}
+
+#nav {
+  width: 100%;
+  height: 150px;
+  padding: 0px 25px;
+}
+#nav1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3232324c;
+  padding: 15px 0px;
+}
+#nav1 #contacts {
+  display: flex;
+  gap: 18px;
+}
+#contacts h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+#nav1 img {
+  height: 75px;
+  width: 80px;
+}
+#nav1 #icons {
+  display: flex;
+  gap: 15px;
+}
+#nav1 i {
+  font-size: 22px;
+  font-weight: 500;
+}
+/* ###### nav2 #### */
+#nav #nav2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+#nav2 a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 19px;
+  font-weight: 550;
+  padding: 15px;
+}
+#nav2 a i {
+  position: absolute;
+  font-size: 25px;
+}
+
+/* ######### show image  ################ */
+#show {
+  width: 100%;
+  height: 585px;
+  /* background-color: red; */
+  padding: 10px 25px;
+}
+#show-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* background-color: blue; */
+  background: url(https://elifeayurveda.com/cdn/shop/files/website_banner_30_off_now.webp?v=1740996746&width=1920);
+  background-position: center;
+  background-size: cover;
+}
+
+/* ############## slide categories  ############# */
+#shop-category {
+  width: 100%;
+  padding: 10px 50px;
+}
+#shop-scroll {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.shop-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+  animation: scroll 16s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.category-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-img img {
+  height: 280px;
+  width: 200px;
+  padding: 1.2vw;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: top;
+  cursor: pointer;
+}
+
+.category-img p {
+  margin-top: 0.5vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #333;
+}
+
+/* #############  bestseller  ################ */
+#bestseller {
+  width: 100%;
+  padding: 20px 50px;
+  margin-bottom: 10px;
+}
+
+#bestseller h3 {
+  font-size: 30px;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+#bestseller p {
+  font-size: 17px;
+  padding-bottom: 20px;
+  color: #666;
+}
+
+#bestseller-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bestseller-img {
+  width: 20%;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.bestseller-img img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+.bestseller-img p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #444;
+  font-weight: bold;
+}
+
+/* ######  Vision   ###### */
+#Vision {
+  width: 100%;
+  background-color: red;
+  background: url(https://elifeayurveda.com/cdn/shop/files/DALL_E_2025-01-18_19.55.46_-_A_professional_banner_design_focusing_on_Ayurvedic_themes_without_any_text._The_image_features_soft_green_and_earthy_tones_with_elements_like_herbs_a.jpg?v=1737210526&width=1500);
+  background-size: cover;
+  background-position: center;
+  padding: 30px 50px;
+  color: #fff;
+}
+#Vision-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 50%;
+  background-color: #1c2b1f80;
+}
+#Vision-detail h3 {
+  font-size: 40px;
+}
+#Vision-detail p {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+#Vision-detail a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* #####   Shop by concern  ###### */
+#shop-by-concern {
+  width: 100%;
+  padding: 10px 50px;
+}
+#shop-by-concern h3 {
+  font-size: 30px;
+  padding: 15px 0px;
+}
+#concern-scroll {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#concern-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.concern-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.concern-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.concern-category img {
+  height: 150px;
+  width: 200px;
+  padding: 1.2vw;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: top;
+  cursor: pointer;
+}
+
+.concern-category p {
+  margin-top: 0.5vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ############# Mission We Carry ############## */
+#mission {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  background-color: red;
+  background: url(https://elifeayurveda.com/cdn/shop/files/840x560.jpg?v=1736620913&width=720);
+  background-position: center;
+  background-size: cover;
+  padding: 50px 50px;
+}
+#mission div {
+  padding: 30px 5px;
+  border-radius: 10px;
+  width: 50%;
+  background-color: #ffffffcf;
+}
+#mission h3 {
+  font-size: 40px;
+  padding: 15px;
+}
+#mission p {
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 20px;
+  font-weight: 500;
+}
+/* ########## Real Stories, Real Results   ########### */
+#stories {
+  width: 100%;
+  padding: 20px 50px;
+}
+#stories h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#stories p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+#stories #videos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+#stories #videos video {
+  width: 20%;
+  border-radius: 10px;
+}
+
+/* #######  Our Trusted Certifications  ####### */
+#certifications {
+  display: flex;
+  padding: 20px 50px;
+  overflow: hidden;
+}
+.certifications-scroll {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
+  animation: scroll 16s linear infinite;
+}
+.certifications-scroll img {
+  height: 110px;
+}
+
+/* ########## Explore ############### */
+.explore {
+  width: 100%;
+  padding: 10px 50px;
+}
+.explore-header {
+  margin-bottom: 20px;
+}
+.explore-header h1 {
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+}
+.explore-header p {
+  color: #666;
+  font-size: 16px;
+}
+.blog-section {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-card {
+  width: 300px;
+}
+.blog-card img {
+  width: 100%;
+  height: 190px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.blog-content {
+  padding: 15px;
+}
+.blog-content h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.blog-content p {
+  font-size: 14px;
+  color: #777;
+}
+.tag {
+  display: inline-block;
+  background: #d4e157;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* #################### footer  ################################# */
+footer {
+  padding: 40px;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-top: 1px solid #ddd;
+}
+.footer-section {
+  max-width: 300px;
+}
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+.subscribe {
+  display: flex;
+  gap: 10px;
+}
+.subscribe input {
+  padding: 10px;
+  width: 150px;
+}
+.subscribe button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
