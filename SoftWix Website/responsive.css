@@ -1,0 +1,295 @@
+@media (max-width: 500px) {
+    header {
+        width: 100%;
+        padding: 0.2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 5vw;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .talk-btn {
+        padding: 5px 10px;
+        font-size: 4vw;
+        gap: 8px;
+        font-weight: 450;
+    }
+
+    /* Hero Section  */
+    #hero {
+        width: 100%;
+        position: relative;
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #Hero-Img {
+        width: 100%;
+    }
+
+    #Hero-Img img {
+        width: 100%;
+        height: auto;
+    }
+
+    #Hero-Text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        background-color: rgba(62, 62, 62, 0.362);
+        width: 100%;
+        height: 100%;
+    }
+
+    #hero #Hero-Text h2 {
+        width: 70%;
+        font-size: 6vw;
+        margin-bottom: 1rem;
+    }
+
+    #hero button.contact-btn {
+        margin-top: 2rem;
+        font-size: 1rem;
+        background-color: #5047EB;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline;
+    }
+
+    /* our Services  */
+
+    #services h2 {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .service-card,
+    .service-card.reverse {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .service-img,
+    .service-content {
+        width: 100%;
+    }
+
+    .service-img {
+        height: auto;
+    }
+
+    .service-img img {
+        height: auto;
+        max-height: 300px;
+    }
+
+    .service-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-content h3 {
+        font-size: 1.2rem;
+    }
+
+    #services>button {
+        font-size: 1rem;
+        padding: 7px 14px;
+        margin-top: 0.5rem;
+    }
+
+    /* Our Team  */
+    #team {
+        display: none;
+    }
+
+    /* Our Team 
+      .all-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+    
+      .team-member {
+        width: 90%;
+        max-width: 320px;
+      }
+    
+      .member-image {
+        height: auto;
+        display: flex;
+        justify-content: center;
+      }
+    
+      .member-image img {
+        width: 150px;
+        height: 150px;
+      }
+    
+      .member-info {
+        padding: 1rem;
+      }
+    
+      .member-info h3 {
+        font-size: 1.1rem;
+      }
+    
+      .member-info .position {
+        font-size: 0.95rem;
+      }
+    
+      .member-info .skills {
+        font-size: 0.85rem;
+      }
+    
+      .social-links a {
+        font-size: 1rem;
+      }
+    
+      .team-header h2 {
+        font-size: 2rem;
+      }
+    
+      .team-header p {
+        font-size: 1rem;
+        margin-bottom: 50px;
+      } */
+
+    /* Why You Choose Us  */
+    .why-choose-section {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .advantages-grid {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .advantage-card {
+        padding: 25px 15px;
+    }
+
+    .advantage-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .advantage-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .advantage-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    /* About Us  */
+    .about-container {
+        padding: 0 1.5rem;
+    }
+
+    .about-section {
+        padding-top: 60px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .lead-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+
+    .about-details {
+        gap: 40px;
+    }
+
+    .mission,
+    .approach {
+        padding: 25px 20px;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .feature-list li {
+        font-size: 1rem;
+        padding-left: 28px;
+    }
+
+    .icon-check {
+        font-size: 1rem;
+        top: 3px;
+    }
+    .about-content {
+        gap: 20px;
+    }
+    /* contact Us  */
+    .contact-section {
+        padding-top: 50px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 40px;
+    }
+
+    /* Footer  */
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-grid {
+        gap: 10px;
+    }
+
+    .footer-title::after {
+        display: none;
+    }
+
+    .footer-contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .footer-legal {
+        gap: 20px;
+    }
+}
